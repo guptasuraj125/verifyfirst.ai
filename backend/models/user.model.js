@@ -1,20 +1,27 @@
 import mongoose from "mongoose";
 
-const userSchema=new mongoose.Schema({
-    sender:{
-        type:String,
-        required:true,
-        enum:["user"]
-    },
-    text:{
-        type:String,
-        required:true
-    },
-    timstamp:{
-        type:Date,
-        default:Date.now
-    }
-})
+const userSchema = new mongoose.Schema({
+  sender: {
+    type: String,
+    enum: ["user", "bot"],
+    required: true
+  },
+  text: {
+    type: String,
+    default: ""
+  },
+  mediaUrl: {
+    type: String,
+    default: null
+  },
+  hasMedia: {
+    type: Boolean,
+    default: false
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-const User=mongoose.model("User",userSchema)
-export default User;
+export default mongoose.model("User", userSchema);

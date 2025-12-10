@@ -6,19 +6,27 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "chatbot",
     "application"
   ],
-  "author": "Akhil K",
+  "author": "Suraj",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/vision": "^5.3.4",
+    "axios": "^1.13.2",
+    "cloudinary": "^1.41.3",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
+    "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "groq-sdk": "^0.37.0",
     "mongoose": "^8.17.1",
+    "multer": "^2.0.2",
+    "multer-storage-cloudinary": "^4.0.0",
     "nodemon": "^3.1.10"
   }
 }

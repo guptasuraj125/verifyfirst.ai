@@ -10,6 +10,9 @@ import mediaRoutes from "./routes/media.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("✅ VerifyFirst Backend is Live");
+});
 
 // Routes
 app.use("/api/chat", chatbotRoutes);

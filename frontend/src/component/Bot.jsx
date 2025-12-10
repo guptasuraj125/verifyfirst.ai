@@ -25,7 +25,7 @@ import { MdDarkMode, MdLightMode, MdContentCopy, MdCheck, MdOutlineEmergency } f
 import { BsThreeDotsVertical, BsFillPinAngleFill, BsPin } from "react-icons/bs";
 import { HiOutlineSparkles } from "react-icons/hi";
 
-const API_URL = "https://verifyfirst-backend-w2skwv8b3-gupta-suraj-krishnas-projects.vercel.app/api/chat/message";
+const API_URL = "https://verifyfirst-backend.vercel.app/api/chat/message";
 
 const STORAGE_KEY_CHATS = "verifyfirst_chats";
 const STORAGE_KEY_ACTIVE = "verifyfirst_active_chat";
@@ -273,7 +273,7 @@ function ChatBot() {
 
     try {
       const uploadRes = await axios.post(
-        "https://verifyfirst-backend-w2skwv8b3-gupta-suraj-krishnas-projects.vercel.app/api/media/upload"
+"https://verifyfirst-backend.vercel.app/api/media/upload"
 ,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
